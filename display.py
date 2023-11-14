@@ -1,5 +1,6 @@
-from main import Main
+from inventory import Inventory
 
-class Display(Main):
+class Display(Inventory):
     def __init__(self):
-        Main.__init__(self)
+        Inventory.__init__(self)
+
