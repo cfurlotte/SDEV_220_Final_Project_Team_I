@@ -14,7 +14,7 @@ class Inventory:
         self.maxPeppers = 75 #oz
         #current amount, should be stored in a file, or create a file if file does not exist
         self.currentDough = self.maxDough
-
+        #continue from the above
         
     #example layout of a function I can call to change amount of something.
     def changeDoughAmount(self, amountToChange):
