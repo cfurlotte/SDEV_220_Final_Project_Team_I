@@ -1,41 +1,54 @@
 import pickle
 
-def load_inventory():
-    try:
-        with open('inventory.pkl', 'rb') as f:
-            return pickle.load(f)
-    except FileNotFoundError:
-        return {}
+class Ingredient:
+    def __init__(self, name, current, max):
+        # Initialize an Ingredient object with a name, current quantity, and maximum quantity
+        self.name = name
+        self.current = current
+        self.max = max
 
-def save_inventory(inventory):
-    with open('inventory.pkl', 'wb') as f:
-        pickle.dump(inventory, f)
+    def change(self, amount):
+        # Change the current quantity of the ingredient by the specified amount
+        self.current == amount
 
-def change_inventory(inventory, item, amount):
-    if item in inventory:
-        inventory[item]['current'] += amount
-    else:
-        print(f"Item {item} not found in inventory.")
-    save_inventory(inventory)
+    def reset(self):
+        # Reset the current quantity of the ingredient to its maximum quantity
+        self.current = self.max
 
-def reset_inventory(inventory, item):
-    if item in inventory:
-        inventory[item]['current'] = inventory[item]['max']
-    else:
-        print(f"Item {item} not found in inventory.")
-    save_inventory(inventory)
+class Inventory:
+    def __init__(self, ingredients):
+        # Initialize an Inventory object with a list of ingredients
+        self.ingredients = ingredients
+
+    def save(self):
+        # Save the ingredients list to a file named 'inventory.pkl' using pickle
+        with open('inventory.pkl', 'wb') as f:
+            pickle.dump(self.ingredients, f)
+
+    def load(self):
+        try:
+            # Load the ingredients list from the file 'inventory.pkl' using pickle
+            with open('inventory.pkl', 'rb') as f:
+                self.ingredients = pickle.load(f)
+        except FileNotFoundError:
+            # If the file is not found, set the ingredients list to an empty list
+            self.ingredients = []
 
 if __name__ == "__main__":
-    inventory = {
-        'Dough': {'current': 25, 'max': 500},
-        'TomatoSauce': {'current': 25, 'max': 300},
-        'Cheese': {'current': 25, 'max': 300},
-        'OliveOil': {'current': 25, 'max': 100},
-        'Pepperoni': {'current': 25, 'max': 100},
-        'Sausage': {'current': 25, 'max': 100},
-        'Ham': {'current': 25, 'max': 100},
-        'Mushrooms': {'current': 25, 'max': 75},
-        'Onions': {'current': 25, 'max': 75},
-        'Peppers': {'current': 25, 'max': 75},
-    }
-    save_inventory(inventory)
+    # Create a list of Ingredient objects
+    ingredients = [
+        Ingredient('Dough', 25, 500),
+        Ingredient('TomatoSauce', 25, 300),
+        Ingredient('Cheese', 25, 300),
+        Ingredient('OliveOil', 25, 100),
+        Ingredient('Pepperoni', 25, 100),
+        Ingredient('Sausage', 25, 100),
+        Ingredient('Ham', 25, 100),
+        Ingredient('Mushrooms', 25, 75),
+        Ingredient('Onions', 25, 75),
+        Ingredient('Peppers', 25, 75),
+    ]
+    # Create an Inventory object with the list of ingredients
+    inventory = Inventory(ingredients)
+    # Save the inventory to a file
+    inventory.save()
