@@ -1,7 +1,11 @@
+
+
 import tkinter as tk
 from gui import GUI
 #from inventory import Inventory
 from display import Display
+import pickle
+
 
 class Main(GUI, Display):
     def __init__(self):
@@ -17,11 +21,14 @@ class Main(GUI, Display):
         self.runGUI()
         
 
-
+    #is called when user hits the order button
     def calculate(self):
+        #gets the info of different selections
         self.selectedPizzaSize = self.pizzaSizeInfo.get()
+        #calculates the amount of dough that the pizza order will use and removes it from inventory
         if self.selectedPizzaSize == 'Small':
-            self.changeDoughAmount(3)
+            self.change_inventory(self.inventory, 'Dough', -3)
+        self.save_inventory(self.inventory)
     def displayDisplay(self):
         self.runDisplay()
     
