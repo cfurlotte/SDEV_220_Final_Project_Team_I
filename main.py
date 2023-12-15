@@ -39,7 +39,7 @@ class Main(GUI, Display):
             if self.pizzaHamInfo == True:
                 self.change_inventory(self.inventory, 'Ham', -1)
             if self.pizzaMushroomInfo == True:
-                self.change_inventory(self.inventory, 'Mushroom', -1)
+                self.change_inventory(self.inventory, 'Mushrooms', -1)
             if self.pizzaOnionsInfo == True:
                 self.change_inventory(self.inventory, 'Onions', -1)
             if self.pizzaPeppersInfo == True:
@@ -56,7 +56,7 @@ class Main(GUI, Display):
             if self.pizzaHamInfo == True:
                 self.change_inventory(self.inventory, 'Ham', -2)
             if self.pizzaMushroomInfo == True:
-                self.change_inventory(self.inventory, 'Mushroom', -2)
+                self.change_inventory(self.inventory, 'Mushrooms', -2)
             if self.pizzaOnionsInfo == True:
                 self.change_inventory(self.inventory, 'Onions', -2)
             if self.pizzaPeppersInfo == True:
@@ -73,7 +73,7 @@ class Main(GUI, Display):
             if self.pizzaHamInfo == True:
                 self.change_inventory(self.inventory, 'Ham', -4)
             if self.pizzaMushroomInfo == True:
-                self.change_inventory(self.inventory, 'Mushroom', -4)
+                self.change_inventory(self.inventory, 'Mushrooms', -4)
             if self.pizzaOnionsInfo == True:
                 self.change_inventory(self.inventory, 'Onions', -4)
             if self.pizzaPeppersInfo == True:
