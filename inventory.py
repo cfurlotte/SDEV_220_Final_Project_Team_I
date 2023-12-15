@@ -1,3 +1,4 @@
+'''Code to manage Inventory, written by David'''
 import pickle
 
 class Inventory:

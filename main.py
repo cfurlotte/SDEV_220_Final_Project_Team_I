@@ -1,4 +1,4 @@
-''''''
+'''Code that connects everything and updates inventory whenever a pizza is ordered, written by Charles.'''
 import tkinter as tk
 from gui import GUI
 #from inventory import Inventory

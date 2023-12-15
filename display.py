@@ -1,3 +1,4 @@
+'''COde to see and restock inventory, written by Charles'''
 import tkinter as tk
 from inventory import Inventory
 import pickle
@@ -116,6 +117,8 @@ class Display(Inventory):
         self.changePeppers = tk.Button(self.display, text = 'Resupply Peppers', command = lambda: self.change_inventory(self.inventory, 'Peppers', self.inventory['Peppers']['max'] - self.inventory['Peppers']['current']))
         self.changePeppers.grid(row=10, column=3)
 
+        '''Refresh Button'''
+        #closes and reopens the window so that inventory amounts update to latest numbers.
         self.refreshWindow = tk.Button(self.display, text = 'Refresh Inventory', command=self.resetWindow)
         self.refreshWindow.grid(row=11, column=2)
 
