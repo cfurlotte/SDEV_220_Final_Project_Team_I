@@ -41,7 +41,7 @@ class GUI:
         #temp var so that checkbutton does not get linked
         self.temp1 = tk.BooleanVar
         #displays a checkbox for weather they want peperoni or not
-        self.pizzaPepperoniOption =  tk.Checkbutton(self.window, text = "Peperoni", variable=self.temp1, command=lambda: self.PeperoniBoolean())
+        self.pizzaPepperoniOption =  tk.Checkbutton(self.window, text = "Pepperoni", variable=self.temp1, command=lambda: self.PeperoniBoolean())
         self.pizzaPepperoniOption.grid(row=3, column=2, ipadx=46, ipady=10, pady=10, padx=85)
 
         #stores if the person ordering wants Sausage

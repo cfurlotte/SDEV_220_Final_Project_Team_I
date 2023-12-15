@@ -42,8 +42,8 @@ class Main(GUI, Display):
                 self.change_inventory(self.inventory, 'Mushroom', -1)
             if self.pizzaOnionsInfo == True:
                 self.change_inventory(self.inventory, 'Onions', -1)
-            if self.pizzaPepperInfo == True:
-                self.change_inventory(self.inventory, 'Pepper', -1)
+            if self.pizzaPeppersInfo == True:
+                self.change_inventory(self.inventory, 'Peppers', -1)
         elif self.selectedPizzaSize == 'Medium':
             self.change_inventory(self.inventory, 'Dough', -6)
             self.change_inventory(self.inventory, 'TomatoSauce', -2)
@@ -59,8 +59,8 @@ class Main(GUI, Display):
                 self.change_inventory(self.inventory, 'Mushroom', -2)
             if self.pizzaOnionsInfo == True:
                 self.change_inventory(self.inventory, 'Onions', -2)
-            if self.pizzaPepperInfo == True:
-                self.change_inventory(self.inventory, 'Pepper', -2)
+            if self.pizzaPeppersInfo == True:
+                self.change_inventory(self.inventory, 'Peppers', -2)
         elif self.selectedPizzaSize == 'Large':
             self.change_inventory(self.inventory, 'Dough', -12)
             self.change_inventory(self.inventory, 'TomatoSauce', -4)
@@ -76,8 +76,8 @@ class Main(GUI, Display):
                 self.change_inventory(self.inventory, 'Mushroom', -4)
             if self.pizzaOnionsInfo == True:
                 self.change_inventory(self.inventory, 'Onions', -4)
-            if self.pizzaPepperInfo == True:
-                self.change_inventory(self.inventory, 'Pepper', -4)
+            if self.pizzaPeppersInfo == True:
+                self.change_inventory(self.inventory, 'Peppers', -4)
 
         self.save_inventory(self.inventory)
     def displayDisplay(self):
